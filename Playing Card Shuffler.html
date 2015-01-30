@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0246)https://www.random.org/playing-cards/?cards=54&decks=1&spades=on&hearts=on&diamonds=on&clubs=on&aces=on&twos=on&threes=on&fours=on&fives=on&sixes=on&sevens=on&eights=on&nines=on&tens=on&jacks=on&queens=on&kings=on&bjoker=on&rjoker=on&remaining=on -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>I shuffle the deck</title>
+  <script src="./data/jquery.min.js"></script>
+  
+  <style>
+  img {
+	margin: 5px;
+  }
+  
+  button {
+	width: 250px;
+	height: 60px;
+  }
+  
+  .separator {
+	width: 30px;
+	height: 30px;
+  }
+  </style>
+</head>
+
+<body>
+<button id="fire">Draw</button>
+<button id="separator">Round end</button>
+
+<script>
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+var deck = [];
+for(i=0; i<54; i++) {
+	deck[i]=i+1;
+}
+var cursor = 0;
+deck = shuffleArray(deck);
+console.log(deck)
+
+$('#fire').click(function(evt) {
+	$('#drawing').append('<img src="./data/'+ deck[cursor] +'.png" width="72" height="96"/>')
+	cursor++;
+	if (cursor >= 54) {
+		alert('the end');
+	}
+})
+
+$('#separator').click(function(evt) {
+	$('#drawing').append('<div class="separator"></div>')	
+})
+
+</script>
+
+<div id="drawing">
+</div>
+
+</body></html>
