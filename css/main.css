@@ -15,6 +15,7 @@ section, form {
 
 .pure-form button {
     font-size: 140%;
+    font-weight: 200;
 }
 
 .gauge {
@@ -24,8 +25,12 @@ section, form {
 
 .gauge div {
     background-color: #78ff3c;
+}
+
+.gauge span {
     font-size: 140%;
     color: white;
     font-weight: 200;
-    padding: 0.3em 0
+    padding: 0.3em;
+    display: block;
 }

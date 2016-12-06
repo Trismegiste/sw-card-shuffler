@@ -11,7 +11,7 @@
                 </button>
                 <div class="gauge">
                     <div style="width: {service.getSizePercent()}%;">
-                        {service.getSizePercent()}%
+                        <span>{service.getSizePercent()}%</span>
                     </div>
                 </div>
             </form>
