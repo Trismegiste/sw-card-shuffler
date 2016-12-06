@@ -1,25 +1,26 @@
 /*
  * Deck of cards
- * https://www.random.org/sequences/?min=1&max=52&col=1&format=plain&rnd=new
  */
 
 var Deck = function () {
     this.listing = [
-        "2_of_clubs.svg", "2_of_diamonds.svg", "2_of_hearts.svg", "2_of_spades.svg",
-        "3_of_clubs.svg", "3_of_diamonds.svg", "3_of_hearts.svg", "3_of_spades.svg",
-        "4_of_clubs.svg", "4_of_diamonds.svg", "4_of_hearts.svg", "4_of_spades.svg",
-        "5_of_clubs.svg", "5_of_diamonds.svg", "5_of_hearts.svg", "5_of_spades.svg",
-        "6_of_clubs.svg", "6_of_diamonds.svg", "6_of_hearts.svg", "6_of_spades.svg",
-        "7_of_clubs.svg", "7_of_diamonds.svg", "7_of_hearts.svg", "7_of_spades.svg",
-        "8_of_clubs.svg", "8_of_diamonds.svg", "8_of_hearts.svg", "8_of_spades.svg",
-        "9_of_clubs.svg", "9_of_diamonds.svg", "9_of_hearts.svg", "9_of_spades.svg",
-        "10_of_clubs.svg", "10_of_diamonds.svg", "10_of_hearts.svg", "10_of_spades.svg",
-        "jack_of_clubs2.svg", "jack_of_diamonds2.svg", "jack_of_hearts2.svg", "jack_of_spades2.svg",
-        "queen_of_clubs2.svg", "queen_of_diamonds2.svg", "queen_of_hearts2.svg", "queen_of_spades2.svg",
-        "king_of_clubs2.svg", "king_of_diamonds2.svg", "king_of_hearts2.svg", "king_of_spades2.svg",
-        "ace_of_clubs.svg", "ace_of_diamonds.svg", "ace_of_hearts.svg", "ace_of_spades.svg",
-        "black_joker.svg",
-        "red_joker.svg"
+        "White_c_2.svg", "White_c_3.svg", "White_c_4.svg", "White_c_5.svg",
+        "White_c_6.svg", "White_c_7.svg", "White_c_8.svg", "White_c_9.svg",
+        "White_c_10.svg", "White_c_j.svg", "White_c_q.svg", "White_c_k.svg",
+        "White_c_a.svg",
+        "White_d_2.svg", "White_d_3.svg", "White_d_4.svg", "White_d_5.svg",
+        "White_d_6.svg", "White_d_7.svg", "White_d_8.svg", "White_d_9.svg",
+        "White_d_10.svg", "White_d_j.svg", "White_d_q.svg", "White_d_k.svg",
+        "White_d_a.svg",
+        "White_h_2.svg", "White_h_3.svg", "White_h_4.svg", "White_h_5.svg",
+        "White_h_6.svg", "White_h_7.svg", "White_h_8.svg", "White_h_9.svg",
+        "White_h_10.svg", "White_h_j.svg", "White_h_q.svg", "White_h_k.svg",
+        "White_h_a.svg",
+        "White_s_2.svg", "White_s_3.svg", "White_s_4.svg", "White_s_5.svg",
+        "White_s_6.svg", "White_s_7.svg", "White_s_8.svg", "White_s_9.svg",
+        "White_s_10.svg", "White_s_j.svg", "White_s_q.svg", "White_s_k.svg",
+        "White_s_a.svg",
+        "White_jk_b.svg", "White_jk_r.svg"
     ]
     this.dealingShoe = []
 }
