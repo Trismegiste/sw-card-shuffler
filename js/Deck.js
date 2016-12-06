@@ -27,13 +27,15 @@ var Deck = function () {
 Deck.prototype.shuffle = function () {
     var self = this
     return new Promise(function (fulfill, reject) {
-        var deck = [];
-        for (i = 0; i < 54; i++) {
-            deck[i] = i;
-        }
-        self.dealingShoe = self.shuffleArray(deck)
-        console.log(self.dealingShoe)
-        fulfill(self)
+        fetch('https://www.random.org/sequences/?min=0&max=53&col=54&format=plain&rnd=new').then(function (response) {
+            return response.text()
+        }).then(function (content) {
+            var extracted = content.split("\t");
+            for (var k = 0; k < 54; k++) {
+                self.dealingShoe[k] = parseInt(extracted[k]);
+            }
+            fulfill(self)
+        })
     })
 }
 
@@ -47,15 +49,4 @@ Deck.prototype.draw = function () {
 
 Deck.prototype.isEmpty = function () {
     return this.dealingShoe.length === 0
-}
-
-Deck.prototype.shuffleArray = function (array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
-    return array;
 }
