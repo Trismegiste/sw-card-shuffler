@@ -21,19 +21,41 @@ var Deck = function () {
         "black_joker.svg",
         "red_joker.svg"
     ]
+    this.dealingShoe = []
 }
 
 Deck.prototype.shuffle = function () {
     var self = this
     return new Promise(function (fulfill, reject) {
+        var deck = [];
+        for (i = 0; i < 54; i++) {
+            deck[i] = i;
+        }
+        self.dealingShoe = self.shuffleArray(deck)
+        console.log(self.dealingShoe)
         fulfill(self)
     })
 }
 
 Deck.prototype.draw = function () {
-    return this.listing[Math.floor(54 * Math.random())]
+    if (!this.isEmpty()) {
+        return this.listing[this.dealingShoe.pop()]
+    } else {
+        throw new Error('End of deck')
+    }
 }
 
 Deck.prototype.isEmpty = function () {
-    return false
+    return this.dealingShoe.length === 0
+}
+
+Deck.prototype.shuffleArray = function (array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    return array;
 }
