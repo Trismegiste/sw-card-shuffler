@@ -1,0 +1,18 @@
+footer.terminal {
+    margin: 2em;
+    font-size: 60%;
+    text-align: center;
+}
+
+.spinner-waiting label {
+    font-size: 500%;
+    color: gray;
+}
+
+section, form {
+    margin: 0.3em 0.3em 1em;
+}
+
+.pure-form button {
+    font-size: 140%;
+}
