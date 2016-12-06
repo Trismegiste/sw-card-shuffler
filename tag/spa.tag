@@ -28,11 +28,15 @@
         var self = this
 
         onDraw() {
-            self.draw.push(self.service.draw())
+            try {
+                self.draw.push(self.service.draw())
+            } catch (e) {
+                alert(e.message)
+            }
         }
 
         onNewRound() {
-
+            self.draw = []
         }
     </script>
 </spa>
