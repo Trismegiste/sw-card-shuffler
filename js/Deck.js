@@ -33,3 +33,7 @@ Deck.prototype.shuffle = function () {
 Deck.prototype.draw = function () {
     return this.listing[Math.floor(54 * Math.random())]
 }
+
+Deck.prototype.isEmpty = function () {
+    return false
+}

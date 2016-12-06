@@ -5,7 +5,7 @@
                 <img if="{draw.length > 0}" src="./assets/{draw[draw.length-1]}" class="pure-img"/>
             </section>
             <form class="pure-form" onsubmit="{onDraw}">
-                <button class="pure-button pure-input-1">Draw</button>
+                <button class="pure-button pure-input-1" if="{!service.isEmpty()}">Draw</button>
             </form>
         </div>
         <div class="pure-u-2-3">
@@ -31,7 +31,7 @@
             try {
                 self.draw.push(self.service.draw())
             } catch (e) {
-                alert(e.message)
+                console.log(e.message)
             }
         }
 
