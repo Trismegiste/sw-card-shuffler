@@ -35,6 +35,12 @@
         this.draw = []
         var self = this
 
+        // this to hide waiting spinner
+        this.on('mount', function() {
+            document.getElementById('waiting').remove()
+            document.getElementById('mainapp').className = ''
+        })
+
         onDraw() {
             try {
                 self.draw.push(self.service.draw())

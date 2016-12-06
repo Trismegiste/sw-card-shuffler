@@ -4,9 +4,10 @@ footer.terminal {
     text-align: center;
 }
 
-.spinner-waiting label {
-    font-size: 500%;
-    color: gray;
+#waiting {
+    font-size: 1000%;
+    color: lightgray;
+    text-align: center;
 }
 
 section, form {
