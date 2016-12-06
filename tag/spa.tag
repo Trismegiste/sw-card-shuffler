@@ -5,7 +5,15 @@
                 <img if="{draw.length > 0}" src="./assets/{draw[draw.length-1]}" class="pure-img"/>
             </section>
             <form class="pure-form" onsubmit="{onDraw}">
-                <button class="pure-button pure-input-1" if="{!service.isEmpty()}">Draw</button>
+                <button class="pure-button pure-input-1"
+                        if="{!service.isEmpty()}">
+                    Draw
+                </button>
+                <div class="gauge">
+                    <div style="width: {service.getSizePercent()}%;">
+                        {service.getSizePercent()}%
+                    </div>
+                </div>
             </form>
         </div>
         <div class="pure-u-2-3">
@@ -17,7 +25,7 @@
                 </div>
             </section>
             <form class="pure-form" onsubmit="{onNewRound}">
-                <button class="pure-button pure-input-1">New</button>
+                <button class="pure-button pure-input-1">New round</button>
             </form>
         </div>
     </div>

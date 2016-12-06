@@ -16,3 +16,16 @@ section, form {
 .pure-form button {
     font-size: 140%;
 }
+
+.gauge {
+    margin-top: 1em;
+    background-color: #d1ffbc;
+}
+
+.gauge div {
+    background-color: #78ff3c;
+    font-size: 140%;
+    color: white;
+    font-weight: 200;
+    padding: 0.3em 0
+}

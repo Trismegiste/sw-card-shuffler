@@ -51,3 +51,7 @@ Deck.prototype.draw = function () {
 Deck.prototype.isEmpty = function () {
     return this.dealingShoe.length === 0
 }
+
+Deck.prototype.getSizePercent = function () {
+    return Math.floor(100 * this.dealingShoe.length / 54)
+}
