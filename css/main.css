@@ -1,0 +1,37 @@
+footer.terminal {
+    margin: 2em;
+    font-size: 60%;
+    text-align: center;
+}
+
+#waiting {
+    font-size: 1000%;
+    color: lightgray;
+    text-align: center;
+}
+
+section, form {
+    margin: 0.3em 0.3em 1em;
+}
+
+.pure-form button {
+    font-size: 140%;
+    font-weight: 200;
+}
+
+.gauge {
+    margin-top: 1em;
+    background-color: #d1ffbc;
+}
+
+.gauge div {
+    background-color: #78ff3c;
+}
+
+.gauge span {
+    font-size: 140%;
+    color: white;
+    font-weight: 200;
+    padding: 0.3em;
+    display: block;
+}
